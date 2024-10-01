@@ -20,6 +20,7 @@ public class MainFrame extends JFrame {
   private PanelDefault panelDefault;
   private PanelMain panelMain;
   private PanelStatus panelStatus;
+  private Settings panelSettings;
 
   private MainFrame() {
     setSize(500, 400);
@@ -67,9 +68,11 @@ public class MainFrame extends JFrame {
     panelDefault = new PanelDefault();
     panelMain = new PanelMain();
     panelVehicleManager = new PanelVehicleManager();
+    panelSettings = new Settings();
     panelCenter.add(panelMain, PanelEnum.MAIN.toString());
     panelCenter.add(panelDefault, PanelEnum.DEFAULT.toString());
     panelCenter.add(panelVehicleManager, PanelEnum.VEHICLE_MANAGER.toString());
+    panelCenter.add(panelSettings, PanelEnum.SETTINGS.toString());
 
   }
 
