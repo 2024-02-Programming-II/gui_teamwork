@@ -11,6 +11,7 @@ import javax.swing.JScrollPane;
 
 import co.edu.uptc.enums.PanelEnum;
 import co.edu.uptc.views.vehicleViews.PanelVehicleManager;
+import est202320336.PrincipalFrame;
 
 public class MainFrame extends JFrame {
 
@@ -70,7 +71,7 @@ public class MainFrame extends JFrame {
     panelCenter.add(panelMain, PanelEnum.MAIN.toString());
     panelCenter.add(panelDefault, PanelEnum.DEFAULT.toString());
     panelCenter.add(panelVehicleManager, PanelEnum.VEHICLE_MANAGER.toString());
-
+    panelCenter.add(PrincipalFrame.getInstantance(), PanelEnum.PRINCIPAL.toString());
   }
 
   public void activatePanel(PanelEnum panelEnum) {
