@@ -4,5 +4,5 @@ public enum PanelEnum {
     DEFAULT, 
     MAIN,
     VEHICLE_MANAGER, 
-    
+    PRINCIPAL,
 }
