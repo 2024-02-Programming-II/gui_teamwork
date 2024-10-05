@@ -5,13 +5,13 @@ import javax.swing.*;
 
 import co.edu.uptc.views.constants.*;
 
-public class Panel202214307 extends JPanel {
+public class PanelStyles extends JPanel {
     private JComboBox<String> fontCombo;
     private JToggleButton boldButton, italicButton, underlineButton;
     private JComboBox<String> alignmentCombo;
     private JTextArea previewArea;
 
-    public Panel202214307() {
+    public PanelStyles() {
         setLayout(new BorderLayout(10, 10));
         setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         setBackground(ColorPalette.COLOR_BACKGROUND_SECOND_MENU);
@@ -120,7 +120,7 @@ public class Panel202214307 extends JPanel {
     private JPanel createToolPanel() {
         JPanel tools = new JPanel(new FlowLayout(FlowLayout.LEFT));
         tools.setOpaque(false);
-        String route = "src/co/edu/uptc/views/views202214307/assets/";
+        String route = "assets/icons/";
         String[] images = { "left.png", "center.png", "right.png", "justify.png", "indenting3.png", "indenting1.png",
                 "indenting2.png", "moreSpace.jpeg", "lessSpace.png", "indentRight.png", "indentLeft.png" };
         addToolButtons(tools, route, images);
@@ -186,7 +186,7 @@ public class Panel202214307 extends JPanel {
     private JButton createFormatButton() {
         JButton format = new JButton("Formato");
         format.addActionListener(e -> {
-            Dialog202214307 format1 = new Dialog202214307();
+            DialogFormat format1 = new DialogFormat();
             format1.setVisible(true);
         });
         return format;

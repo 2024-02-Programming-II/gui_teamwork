@@ -7,8 +7,8 @@ import java.awt.event.*;
 
 import co.edu.uptc.views.constants.*;
 
-public class Dialog202214307 extends JDialog {
-    public Dialog202214307() {
+public class DialogFormat extends JDialog {
+    public DialogFormat() {
         setSize(350, 500);
         setLocationRelativeTo(null);
         getContentPane().setBackground(ColorPalette.COLOR_BACKGROUND_SECOND_MENU);
@@ -63,7 +63,7 @@ public class Dialog202214307 extends JDialog {
 
     private JPanel createbuttonsPanel() {
         JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        String path = "src/co/edu/uptc/views/views202214307/assets/";
+        String path = "assets/icons";
         String[] images = { "aUnderLined.png", "a.png" };
         for (String image : images) {
             ImageIcon icon = new ImageIcon(path + image);

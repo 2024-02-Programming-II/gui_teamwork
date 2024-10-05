@@ -6,7 +6,7 @@ import javax.swing.*;
 
 import co.edu.uptc.enums.PanelEnum;
 import co.edu.uptc.views.vehicleViews.PanelVehicleManager;
-import co.edu.uptc.views.views202214307.Panel202214307;
+import co.edu.uptc.views.views202214307.PanelStyles;
 
 public class MainFrame extends JFrame {
 
@@ -16,7 +16,7 @@ public class MainFrame extends JFrame {
   private PanelDefault panelDefault;
   private PanelMain panelMain;
   private PanelStatus panelStatus;
-  private Panel202214307 panel202214307;
+  private PanelStyles panel202214307;
 
   private MainFrame() {
     setSize(500, 400);
@@ -64,7 +64,7 @@ public class MainFrame extends JFrame {
   private void createPanels() {
     panelDefault = new PanelDefault();
     panelMain = new PanelMain();
-    panel202214307 = new Panel202214307();
+    panel202214307 = new PanelStyles();
     panelVehicleManager = new PanelVehicleManager();
     panelCenter.add(panelMain, PanelEnum.MAIN.toString());
     panelCenter.add(panelDefault, PanelEnum.DEFAULT.toString());
