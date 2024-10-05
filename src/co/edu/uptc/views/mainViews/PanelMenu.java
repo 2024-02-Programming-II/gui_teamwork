@@ -265,7 +265,7 @@ public class PanelMenu extends JPanel {
     addButton("202214307").addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        MainFrame.getInstance().activatePanel(PanelEnum.DEFAULT);
+        MainFrame.getInstance().activatePanel(PanelEnum.C202214307);
       }
 
     });
