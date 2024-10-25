@@ -1,6 +1,5 @@
-package est202320336;
+package co.edu.uptc.views.est202320336;
 
-import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -10,17 +9,19 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-
+import java.awt.BasicStroke;
+import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-public class PanelImportant extends JPanel{
+public class PanelMyDay extends JPanel{
     private JPanel jPanel ;
-    public PanelImportant(){
+    public PanelMyDay(){
         setLayout(new FlowLayout(FlowLayout.LEFT, 30, 10));
+        setBackground(Color.RED);
         setOpaque(false);
         init();
     }
@@ -28,6 +29,7 @@ public class PanelImportant extends JPanel{
     private void init(){
         addJlabelMiDia();
         addJlabelFecha();
+        addPanel1();
         addPanel2();
     }
     
@@ -47,8 +49,12 @@ public class PanelImportant extends JPanel{
         jLabel.setForeground(Color.WHITE);
         this.add(jLabel);
     }
+    private void addPanel1(){
+        jPanel=createPanel("Realizar diseño de sistema de información","\\assents\\check.png","/assents/importante.png");
+        
+    }
     private void addPanel2() {
-        jPanel=createPanel("Visita amigos","/src/est202320336/pictes/circulo.png","/src/est202320336/pictes/checkImportante.png");
+        jPanel=createPanel("Visita amigos","/assents/circulo.png","/assents/checkImportante.png");
     }
     private JPanel createPanel(String text,String way, String way2){
         jPanel = new JPanel(){
@@ -64,6 +70,11 @@ public class PanelImportant extends JPanel{
                 g2.drawRoundRect(1, 1, getWidth() - 2, getHeight() - 2, 30, 30);
             }
         };
+        propietiesPanel(text, way, way2);
+        this.add(jPanel);
+        return jPanel;
+    }
+    private void propietiesPanel(String text,String way, String way2){
         jPanel.setOpaque(false);
         jPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
         jPanel.setPreferredSize(new Dimension(PrincipalFrame.getInstantance().getjPanel().getWidth()-60,60));
@@ -72,8 +83,6 @@ public class PanelImportant extends JPanel{
         jPanel.add(jLabel);
         addButtonPanel(way2);
         jPanel.setVisible(true);
-        this.add(jPanel);
-        return jPanel;
     }
     private void addButtonPanel(String way){
         String projectRoot = System.getProperty("user.dir");

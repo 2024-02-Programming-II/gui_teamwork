@@ -1,4 +1,4 @@
-package est202320336;
+package co.edu.uptc.views.est202320336;
 
 import java.awt.BasicStroke;
 import java.awt.BorderLayout;
@@ -51,11 +51,11 @@ public class PanelPlaneadas extends JPanel{
         this.add(jLabel);
     }
     private void addPanel1(){
-        jPanel=createPanel("VisitarMedico","\\src\\est202320336\\pictes\\circulo.png","\\src\\est202320336\\pictes\\importante.png");
+        jPanel=createPanel("VisitarMedico","\\assents\\circulo.png","\\assents\\importante.png");
         
     }
     private void addPanel2() {
-        jPanel=createPanel("Entregar trabajo","\\src\\est202320336\\pictes\\circulo.png","\\src\\est202320336\\pictes\\\\Importante.png");
+        jPanel=createPanel("Entregar trabajo","\\assents\\circulo.png","\\assents\\\\Importante.png");
     }
     private JPanel createPanel(String text,String way, String way2){
         jPanel = new JPanel(){
@@ -70,18 +70,19 @@ public class PanelPlaneadas extends JPanel{
                 g2.setStroke(new BasicStroke(1)); 
                 g2.drawRoundRect(1, 1, getWidth() - 2, getHeight() - 2, 30, 30);
             }
-        };
+        }; propietiesPanel(text, way, way2);
+        this.add(jPanel);
+        return jPanel;
+    }
+    private void propietiesPanel(String text,String way, String way2){
         jPanel.setOpaque(false);
         jPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
         jPanel.setPreferredSize(new Dimension(PrincipalFrame.getInstantance().getjPanel().getWidth()-60,60));
         addButtonPanel(way);
         JLabel jLabel = new JLabel(text);
         jPanel.add(jLabel);
-        addButtonCalendary();
         addButtonPanel(way2);
         jPanel.setVisible(true);
-        this.add(jPanel);
-        return jPanel;
     }
     private void addButtonPanel(String way){
         String projectRoot = System.getProperty("user.dir");
@@ -94,7 +95,7 @@ public class PanelPlaneadas extends JPanel{
     }
     private void addButtonCalendary(){
         String projectRoot = System.getProperty("user.dir");
-        String imagePath = projectRoot+"\\src\\est202320336\\pictes\\calendario.png";
+        String imagePath = projectRoot+"\\assents\\calendario.png";
         ImageIcon image = new ImageIcon(imagePath);
         JButton jButton = new JButton(image);
         jButton.setBackground(Color.WHITE);

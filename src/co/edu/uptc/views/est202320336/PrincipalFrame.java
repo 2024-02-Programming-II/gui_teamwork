@@ -1,4 +1,4 @@
-package est202320336;
+package co.edu.uptc.views.est202320336;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -8,7 +8,6 @@ import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class PrincipalFrame extends JPanel{
@@ -88,7 +87,7 @@ public class PrincipalFrame extends JPanel{
     private void createPanelFound(){
         jPanel = new JPanel(){
         String projectRoot = System.getProperty("user.dir");
-        String imagePath = projectRoot+"\\src\\est202320336\\pictes\\fondo.png";
+        String imagePath = projectRoot+"\\assents\\fondo.png";
         private Image image = new ImageIcon(imagePath).getImage();
         @Override
         protected void paintComponent(Graphics g) {
@@ -96,11 +95,7 @@ public class PrincipalFrame extends JPanel{
             g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
         }
     };
-    String projectRoot = System.getProperty("user.dir");
-        String imagePath = projectRoot+"\\src\\est202320336\\pictes\\fondo.png";
-       jPanel.setBackground(Color.GREEN);
         jPanel.setLayout(null);
-        System.out.println(imagePath);
         this.add(jPanel,BorderLayout.CENTER);
     }
     private void createPanelWest(){

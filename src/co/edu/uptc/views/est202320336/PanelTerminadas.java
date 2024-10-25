@@ -1,4 +1,4 @@
-package est202320336;
+package co.edu.uptc.views.est202320336;
 
 import java.awt.BasicStroke;
 import java.awt.BorderLayout;
@@ -49,7 +49,7 @@ public class PanelTerminadas extends JPanel{
         this.add(jLabel);
     }
     private void addPanel1(){
-        jPanel=createPanel("Realizar diseño de sistema de información","\\src\\est202320336\\pictes\\check.png","\\src\\est202320336\\pictes\\importante.png");
+        jPanel=createPanel("Realizar diseño de sistema de información","\\assents\\check.png","\\assents\\importante.png");
         
     }
     private JPanel createPanel(String text,String way, String way2){
@@ -65,7 +65,11 @@ public class PanelTerminadas extends JPanel{
                 g2.setStroke(new BasicStroke(1)); 
                 g2.drawRoundRect(1, 1, getWidth() - 2, getHeight() - 2, 30, 30);
             }
-        };
+        }; propietiesPanel(text, way, way2);
+        this.add(jPanel);
+        return jPanel;
+    }
+    private void propietiesPanel(String text,String way, String way2){
         jPanel.setOpaque(false);
         jPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
         jPanel.setPreferredSize(new Dimension(PrincipalFrame.getInstantance().getjPanel().getWidth()-60,60));
@@ -74,8 +78,6 @@ public class PanelTerminadas extends JPanel{
         jPanel.add(jLabel);
         addButtonPanel(way2);
         jPanel.setVisible(true);
-        this.add(jPanel);
-        return jPanel;
     }
     private void addButtonPanel(String way){
         String projectRoot = System.getProperty("user.dir");

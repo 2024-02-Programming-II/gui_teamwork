@@ -1,4 +1,4 @@
-package est202320336;
+package co.edu.uptc.views.est202320336;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -80,7 +80,7 @@ public class PanelWest extends JPanel{
     private void addJlabelFoto(){
         JLabel jLabel = new JLabel();
         String projectRoot = System.getProperty("user.dir");
-        String imagePath = projectRoot+"/src/est202320336/pictes/usuario.png";
+        String imagePath = projectRoot+"/assents/usuario.png";
         ImageIcon image = new ImageIcon(imagePath);
         jLabel.setIcon(image);
         jPanelNorth.add(jLabel);
@@ -108,7 +108,7 @@ public class PanelWest extends JPanel{
     }
     private void addJbuttonMyDay(){
         String projectRoot = System.getProperty("user.dir");
-        String imagePath = projectRoot+"/src/est202320336/pictes/Dia.png";
+        String imagePath = projectRoot+"/assents/Dia.png";
         ImageIcon image = new ImageIcon(imagePath);
         JButton jButton = addJbutton("Mi día",image);
         jButton.addActionListener(new ActionListener() {
@@ -123,7 +123,7 @@ public class PanelWest extends JPanel{
     }
     private void addJbuttonImportantes(){
         String projectRoot = System.getProperty("user.dir");
-        String imagePath = projectRoot+"/src/est202320336/pictes/importante.png";
+        String imagePath = projectRoot+"/assents/importante.png";
         ImageIcon image = new ImageIcon(imagePath);
         JButton jButton = addJbutton("Importantes",image);
         jButton.addActionListener(new ActionListener() {
@@ -138,7 +138,7 @@ public class PanelWest extends JPanel{
      }
      private void addJbuttonTerminadas(){
          String projectRoot = System.getProperty("user.dir");
-         String imagePath = projectRoot+"/src/est202320336/pictes/checklist.png";
+         String imagePath = projectRoot+"/assents/checklist.png";
          ImageIcon image = new ImageIcon(imagePath);
          JButton jButton = addJbutton("Terminadas",image);
          jButton.addActionListener(new ActionListener() {
@@ -152,7 +152,7 @@ public class PanelWest extends JPanel{
      }
      private void addJbuttonPlaneadas(){
          String projectRoot = System.getProperty("user.dir");
-         String imagePath = projectRoot+"/src/est202320336/pictes/calendario.png";
+         String imagePath = projectRoot+"/assents/calendario.png";
          ImageIcon image = new ImageIcon(imagePath);
          JButton jButton = addJbutton("Planeadas",image);
          jButton.addActionListener(new ActionListener() {
@@ -167,7 +167,7 @@ public class PanelWest extends JPanel{
      }
      private void addJbuttonConfiguaration(){
          String projectRoot = System.getProperty("user.dir");
-         String imagePath = projectRoot+"/src/est202320336/pictes/configuracion.png";
+         String imagePath = projectRoot+"/assents/configuracion.png";
          ImageIcon image = new ImageIcon(imagePath);
          JButton jButton = addJbutton("Configuración",image);
        
@@ -175,7 +175,7 @@ public class PanelWest extends JPanel{
      }
      private void addJbuttonExit(){
          String projectRoot = System.getProperty("user.dir");
-         String imagePath = projectRoot+"/src/est202320336/pictes/salir.png";
+         String imagePath = projectRoot+"/assents/salir.png";
          ImageIcon image = new ImageIcon(imagePath);
          JButton jButton = addJbutton("Exit",image);
         jPanelSouth.add(jButton);
