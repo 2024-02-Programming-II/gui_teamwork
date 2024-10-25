@@ -103,7 +103,7 @@ public class PanelCenterNorthStyles extends JPanel{
 
       private void addJComBoxItem(JPanel panel, int x, String opcion) {
         String projectRoottt = System.getProperty("user.dir");
-        String imagePath = projectRoottt + "/src/assest202320071/paragraph.png";
+        String imagePath = projectRoottt + "/assents/paragraph.png"; 
         ComboItem[] opciones = {
           
             new ComboItem(opcion, new ImageIcon(imagePath)),

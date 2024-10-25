@@ -109,7 +109,7 @@ public class PanelStylesIcon extends JPanel{
         button.setBorderPainted(false);
         button.setMaximumSize(new Dimension(15,15));
         String projectRoot = System.getProperty("user.dir");
-        String imagePath = projectRoot + "/src/assest202320071/" + name;
+        String imagePath = projectRoot + "/assents/" + name;
         ImageIcon icon = new ImageIcon(imagePath);
         Image img = icon.getImage();
        Image newImg = img.getScaledInstance(15, 15, java.awt.Image.SCALE_SMOOTH);
@@ -134,7 +134,7 @@ public class PanelStylesIcon extends JPanel{
         button.setBorderPainted(false);
         button.setMaximumSize(new Dimension(15,15));
         String projectRoot = System.getProperty("user.dir");
-        String imagePath = projectRoot + "/src/assest202320071/" + name;
+        String imagePath = projectRoot + "/assents/" + name;
         ImageIcon icon = new ImageIcon(imagePath);
         Image img = icon.getImage();
        Image newImg = img.getScaledInstance(15, y, java.awt.Image.SCALE_SMOOTH);
