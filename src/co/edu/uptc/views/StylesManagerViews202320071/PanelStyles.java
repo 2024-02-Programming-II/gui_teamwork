@@ -17,7 +17,7 @@ public class PanelStyles extends JPanel{
        setBackground(Color.LIGHT_GRAY);
         initComponents();
       }
-    
+
       private void initComponents() {
         addPanelNorth();
         addPanelCenter();
@@ -63,7 +63,6 @@ public class PanelStyles extends JPanel{
         miniPanel.add(addButtomFormat());
         
         panel.add(miniPanel);
-
 
       }
       private JToggleButton  addButtomFormat(){
