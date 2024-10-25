@@ -1,14 +1,11 @@
 package co.edu.uptc.views.components;
 
-import java.awt.Color;
-
-import javax.swing.JColorChooser;
-import javax.swing.JComponent;
-import javax.swing.JDialog;
-import javax.swing.JPanel;
-import javax.swing.plaf.ColorUIResource;
 
 import co.edu.uptc.views.constants.ColorPalette;
+import javax.swing.JColorChooser;
+import javax.swing.JComponent;
+import javax.swing.JPanel;
+import javax.swing.plaf.ColorUIResource;
 
 public class JColorChooserCustom extends JColorChooser{
     

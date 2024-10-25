@@ -1,10 +1,12 @@
 package co.edu.uptc.views.mainViews;
 
+import co.edu.uptc.enums.PanelEnum;
+import co.edu.uptc.views.est202310254.PanelModifyStyles;
+import co.edu.uptc.views.vehicleViews.PanelVehicleManager;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -21,6 +23,7 @@ public class MainFrame extends JFrame {
   private PanelMain panelMain;
   private PanelStatus panelStatus;
   private PanelStyles panelStyles;
+  private PanelModifyStyles panelModifyStyles;
 
   private MainFrame() {
     setSize(500, 400);
@@ -69,8 +72,10 @@ public class MainFrame extends JFrame {
     panelMain = new PanelMain();
     panelVehicleManager = new PanelVehicleManager();
     panelStyles = new PanelStyles();
+    panelModifyStyles = new PanelModifyStyles();
     panelCenter.add(panelMain, PanelEnum.MAIN.toString());
     panelCenter.add(panelDefault, PanelEnum.DEFAULT.toString());
+    panelCenter.add(panelModifyStyles, PanelEnum.MODIFY_STYLES.toString());
     panelCenter.add(panelVehicleManager, PanelEnum.VEHICLE_MANAGER.toString());
     panelCenter.add(panelStyles, PanelEnum.STYLES_MANAGER.toString());
   }

@@ -108,6 +108,7 @@ public class PanelCenterNorthStyles extends JPanel{
           
             new ComboItem(opcion, new ImageIcon(imagePath)),
         };
+        
         JComboBox<ComboItem> comboBox = new JComboBox<>(opciones);
         comboBox.setPreferredSize(new Dimension(x, 20));
         comboBox.setBackground(Color.WHITE);

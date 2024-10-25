@@ -30,6 +30,7 @@ public class PanelStylesIcon extends JPanel{
         add(panelNorth);
     }
 
+    
     private void addPanelCenter(){
        
         JPanel panelSouth = new JPanel();

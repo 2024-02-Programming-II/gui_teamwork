@@ -24,6 +24,7 @@ public class RoundedToggleButtom extends JToggleButton {
         super.paintComponent(g);
     }
 
+    
     @Override
     public void paintBorder(Graphics g) {
         g.setColor(getForeground());

@@ -127,5 +127,6 @@ private void addPanelExampleText(JPanel jpanel){
      jpanel.add(option2);
   
   }
+  
 
 }

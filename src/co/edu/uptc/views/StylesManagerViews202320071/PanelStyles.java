@@ -65,6 +65,7 @@ public class PanelStyles extends JPanel{
         panel.add(miniPanel);
 
       }
+      
       private JToggleButton  addButtomFormat(){
        
         RoundedToggleButtom toggleButton = new RoundedToggleButtom("Formato");

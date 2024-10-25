@@ -3,9 +3,6 @@ import javax.swing.*;
 import java.awt.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
-
-
-
 import co.edu.uptc.views.constants.ColorPalette;
 import co.edu.uptc.views.mainViews.MainFrame;
 
@@ -102,14 +99,19 @@ public void addButton(String name, JPanel panel) {
     button.setBackground(Color.WHITE);
     button.setBorderPainted(false);
     button.setMaximumSize(new Dimension(15,15));
+   
+    button.setIcon(imageRedimention(name));
+    panel.add(button);
+ }
+ private Icon imageRedimention(String name){
     String projectRoot = System.getProperty("user.dir");
     String imagePath = projectRoot + "/src/assest202320071/" + name;
     ImageIcon icon = new ImageIcon(imagePath);
     Image img = icon.getImage();
    Image newImg = img.getScaledInstance(15, 15, java.awt.Image.SCALE_SMOOTH);
     icon = new ImageIcon(newImg);
-    button.setIcon(icon);
-    panel.add(button);
+    return icon;
+
  }
 
  private void addButtomSimple(String name, JPanel panel){
