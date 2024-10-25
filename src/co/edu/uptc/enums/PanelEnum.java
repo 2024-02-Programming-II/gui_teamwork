@@ -4,5 +4,6 @@ public enum PanelEnum {
     DEFAULT, 
     MAIN,
     VEHICLE_MANAGER, 
+    MODIFY_STYLES,
     PRINCIPAL,
 }
