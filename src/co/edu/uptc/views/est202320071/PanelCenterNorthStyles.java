@@ -1,4 +1,4 @@
-package co.edu.uptc.views.StylesManagerViews202320071;
+package co.edu.uptc.views.est202320071;
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.border.EmptyBorder;
