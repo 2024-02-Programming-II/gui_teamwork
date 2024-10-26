@@ -1,13 +1,24 @@
 package co.edu.uptc.views.est202320071;
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.Icon;
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.Image;
 import co.edu.uptc.views.constants.ColorPalette;
 import co.edu.uptc.views.mainViews.MainFrame;
 
 public class JDialogFormato extends JDialog {
-    public static final Color MICROSOFT = new Color( 239, 239, 239); 
+
    
 
 public JDialogFormato(){
@@ -23,7 +34,6 @@ private void initComponents(){
 }
 private void addPanelContainer(){
     JPanel panel = new JPanel();
-    panel.setBackground(MICROSOFT);
     panel.setLayout(new BorderLayout());
     panel.setPreferredSize(new Dimension(this.getWidth(), this.getHeight()));
     Border topBorder = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY);
@@ -40,7 +50,6 @@ private void initComponentsPanelContainer(JPanel panel){
 private void addPanelNorth(JPanel panel){
    
     JPanel panelNorth = new JPanel();
-       panelNorth.setBackground(MICROSOFT);
         panelNorth.setLayout(new FlowLayout(FlowLayout.LEFT));
         panelNorth.setPreferredSize(new Dimension(this.getWidth(), 100));
         initComponentsPanelNorth(panelNorth);
@@ -82,7 +91,6 @@ private void addPanelSouth(JPanel panel){
 private void addPanelCenter(JPanel panel){
    
     JPanel panelCenter = new JPanel();
-    panelCenter.setBackground(MICROSOFT);
     panelCenter.setLayout(new BoxLayout(panelCenter, BoxLayout.Y_AXIS));
     panelCenter.setPreferredSize(new Dimension(350, 100));
     Border topBorder = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY);
@@ -117,7 +125,6 @@ public void addButton(String name, JPanel panel) {
  private void addButtomSimple(String name, JPanel panel){
     JButton button = new JButton(name);
     button.setBorder(null);
-    button.setBackground(MICROSOFT);
     panel.add(button);
 
  }

@@ -1,22 +1,27 @@
 package co.edu.uptc.views.est202320071;
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JCheckBox;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.BorderFactory;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 
 public class PanelStylesCenter extends JPanel {
 
     public PanelStylesCenter(){
         setLayout(new BorderLayout());
-        setBackground(Color.LIGHT_GRAY);
         initComponents();
-
     }
 
     private void initComponents(){
         add(addPanelCenterNorth(), BorderLayout.NORTH);
         add(addPanelCenterCenter(), BorderLayout.CENTER);
-        
       
     }
 
@@ -24,7 +29,6 @@ public class PanelStylesCenter extends JPanel {
     private JPanel addPanelCenterNorth(){
         PanelCenterNorthStyles centerPanelNorth = new PanelCenterNorthStyles();
         centerPanelNorth.setPreferredSize(new Dimension(this.getWidth(), 190));
-        centerPanelNorth.setBackground(Color.LIGHT_GRAY);
         centerPanelNorth.setBorder(new EmptyBorder(10, 10, 10, 0));
        
      
@@ -35,7 +39,6 @@ public class PanelStylesCenter extends JPanel {
       
         JPanel centerPanelCenter = new JPanel();
         centerPanelCenter.setPreferredSize(new Dimension(this.getWidth(), 300));
-        centerPanelCenter.setBackground(Color.CYAN);
         centerPanelCenter.setLayout(new BorderLayout());
         centerPanelCenter.add(addPanelCenterCenterNorth(), BorderLayout.NORTH);
         centerPanelCenter.add(addPanelCenterCenterJPanel(), BorderLayout.CENTER);
@@ -56,7 +59,6 @@ public class PanelStylesCenter extends JPanel {
        
           JPanel centerPanelCenter = new JPanel();
           centerPanelCenter.setPreferredSize(new Dimension(this.getWidth(), 100));
-          centerPanelCenter.setBackground(Color.LIGHT_GRAY);
          
           centerPanelCenter.setBorder(new EmptyBorder(10, 10, 10, 10));
          centerPanelCenter.setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -74,9 +76,9 @@ public class PanelStylesCenter extends JPanel {
       }
 
   
-  private JLabel addLabel(String name, JPanel panel, int x){
+  private JLabel addLabel(String name, JPanel panel){
     JLabel label = new JLabel(name); 
-    label.setPreferredSize(new Dimension(x, 20));
+    label.setPreferredSize(new Dimension(1200, 20));
     panel.add(label);
     return label;
   } 
@@ -84,7 +86,7 @@ public class PanelStylesCenter extends JPanel {
 private void addPanelExampleText(JPanel jpanel){
     JPanel panelExampleText = new JPanel();
     panelExampleText.setLayout(new FlowLayout(FlowLayout.LEFT));
-    addLabel("TextoEjemploTextoEjemploTextoEjemploTextoEjemploTextoEjemploTextoEjemploTextoEjemplo", panelExampleText, 1200);
+    addLabel("TextoEjemploTextoEjemploTextoEjemploTextoEjemploTextoEjemploTextoEjemploTextoEjemplo", panelExampleText);
     panelExampleText.setPreferredSize(new Dimension(1300, 250));
     panelExampleText.setBackground(Color.WHITE);
     Border topBorder = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY);
@@ -98,17 +100,16 @@ private void addPanelExampleText(JPanel jpanel){
     panelExampleText.setPreferredSize(new Dimension(1300, 70));
     addLabel("Fuente: (Predeterminada) +Cuerpo (Calibri), Izquierda\n" + 
           "\n" +  "Interlineado: Múltiple 1,08 lín., Espacio\n" + 
-          "\n" + "Después: 8 pto, Control de líneas viudas y huérfanas, Estilo: Mostrar en la galería de estilos", panelExampleText, 1200);
+          "\n" + "Después: 8 pto, Control de líneas viudas y huérfanas, Estilo: Mostrar en la galería de estilos", panelExampleText);
      Border topBorder = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY);
      panelExampleText.setBorder(topBorder);
-    panelExampleText.setBackground(Color.LIGHT_GRAY);
     jpanel.add(panelExampleText);
    }
+
    private void CheckBox(String text, JPanel jpanel){
     JCheckBox checkBox = new JCheckBox(text);
     checkBox.setPreferredSize(new Dimension(1400, 20));
     checkBox.setBorder(null);
-    checkBox.setBackground(Color.LIGHT_GRAY);
     jpanel.add(checkBox);
   
    }
@@ -121,8 +122,6 @@ private void addPanelExampleText(JPanel jpanel){
     ButtonGroup group = new ButtonGroup();
     group.add(option1);
     group.add(option2);
-    option1.setBackground(Color.LIGHT_GRAY);
-    option2.setBackground(Color.LIGHT_GRAY);
      jpanel.add(option1);
      jpanel.add(option2);
   

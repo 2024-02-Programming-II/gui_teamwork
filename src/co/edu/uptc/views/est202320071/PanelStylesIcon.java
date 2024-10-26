@@ -1,18 +1,25 @@
 package co.edu.uptc.views.est202320071;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionListener;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JSeparator;
+import javax.swing.ImageIcon;
+import javax.swing.Icon;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.FlowLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class PanelStylesIcon extends JPanel{
 
     public PanelStylesIcon(){
         
         setLayout(new GridLayout(2, 1));
-        setBackground(Color.LIGHT_GRAY);
         initComponents();
-
-
     }
 
     private void initComponents(){
@@ -23,7 +30,6 @@ public class PanelStylesIcon extends JPanel{
     private void addPanelNorth(){
 
         JPanel panelNorth = new JPanel();
-        panelNorth.setBackground(Color.LIGHT_GRAY);
         panelNorth.setLayout(new FlowLayout(FlowLayout.LEFT));
         initComponentsPanelNorth(panelNorth);
         
@@ -33,25 +39,24 @@ public class PanelStylesIcon extends JPanel{
     
     private void addPanelCenter(){
        
-        JPanel panelSouth = new JPanel();
-        panelSouth.setBackground(Color.LIGHT_GRAY);
-        panelSouth.setLayout(new FlowLayout(FlowLayout.LEFT));
-        initComponentsPanelCenter(panelSouth);
+        JPanel panelCenter = new JPanel();
+        panelCenter.setLayout(new FlowLayout(FlowLayout.LEFT));
+        initComponentsPanelCenter(panelCenter);
       
-        add(panelSouth);
+        add(panelCenter);
 
     }
 
     private void initComponentsPanelNorth(JPanel panel){
        
-        addJComBox( panel, 150, "Calibri (cuerpo)");
-        addJComBox( panel, 50, "11");
+        addJComBox( panel, "Calibri (cuerpo)");
+        addJComBox11( panel, "11");
         addSeparator(panel);
         addButton("N.png", panel);
         addButton("cursiva.png", panel);
         addButton("S.png", panel);
         addSeparator(panel);
-        addJComBox( panel, 150, "  Automático");
+        addJComBox( panel, "  Automático");
        
     }
     private void initComponentsPanelCenter(JPanel panel){
@@ -71,22 +76,33 @@ public class PanelStylesIcon extends JPanel{
         addButton("sangriaLeft.png", panel);
     }
 
-    private void addJComBox(JPanel panel, int x, String opcion){
+    private void addJComBox(JPanel panel, String opcion){
      
         String[] opciones = {opcion, "Opción 2", "Opción 3", "Opción 4"};
          JComboBox<String> comboBox = new JComboBox<>(opciones);
          comboBox.setBackground(Color.WHITE);
-        comboBox.setPreferredSize(new Dimension(x, 20));
-       
-      
-         
+        comboBox.setPreferredSize(new Dimension(150, 20));
          comboBox.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
                 
               comboBox.removeItem(opcion);
-                 
+             }
+         });
+         panel.add(comboBox);
+
+      }
+      private void addJComBox11(JPanel panel, String opcion){
+     
+        String[] opciones = {opcion, "14", "16", "18"};
+         JComboBox<String> comboBox = new JComboBox<>(opciones);
+         comboBox.setBackground(Color.WHITE);
+        comboBox.setPreferredSize(new Dimension(50, 20));
+         comboBox.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
                 
+              comboBox.removeItem(opcion);
              }
          });
          panel.add(comboBox);
@@ -105,16 +121,10 @@ public class PanelStylesIcon extends JPanel{
         button.setPreferredSize(buttonSize);
         button.setMinimumSize(buttonSize);
         button.setMaximumSize(buttonSize);
-        button.setBackground(Color.lightGray);
         button.setBorderPainted(false);
         button.setMaximumSize(new Dimension(15,15));
-        String projectRoot = System.getProperty("user.dir");
-        String imagePath = projectRoot + "/assents/" + name;
-        ImageIcon icon = new ImageIcon(imagePath);
-        Image img = icon.getImage();
-       Image newImg = img.getScaledInstance(15, 15, java.awt.Image.SCALE_SMOOTH);
-        icon = new ImageIcon(newImg);
-        button.setIcon(icon);
+       
+        button.setIcon(imageRedimention(name));
        
         button.addActionListener(new ActionListener() {
             @Override
@@ -124,35 +134,38 @@ public class PanelStylesIcon extends JPanel{
         });
         panel.add(button);
      }
-     public void addButtonWithDimension(String name, JPanel panel, int y) {
+     public void addButtonWithDimension(String name, JPanel panel) {
         JButton button = new JButton();
         Dimension buttonSize = new Dimension(20, 20);
         button.setPreferredSize(buttonSize);
         button.setMinimumSize(buttonSize);
         button.setMaximumSize(buttonSize);
-        button.setBackground(Color.lightGray);
         button.setBorderPainted(false);
         button.setMaximumSize(new Dimension(15,15));
+        
+        button.setIcon(imageRedimention(name));
+    
+        panel.add(button);
+     }
+     private Icon imageRedimention(String name) {
         String projectRoot = System.getProperty("user.dir");
         String imagePath = projectRoot + "/assents/" + name;
         ImageIcon icon = new ImageIcon(imagePath);
         Image img = icon.getImage();
-       Image newImg = img.getScaledInstance(15, y, java.awt.Image.SCALE_SMOOTH);
+       Image newImg = img.getScaledInstance(15, 15, java.awt.Image.SCALE_SMOOTH);
         icon = new ImageIcon(newImg);
-        button.setIcon(icon);
-    
-        panel.add(button);
-     }
+        return icon;
+    }
      private void addButtomAlig1(JPanel panel){
-        addButtonWithDimension("Aliggg.png", panel, 10);
+        addButtonWithDimension("Aliggg.png", panel);
 
      }
      private void addButtomAlig2(JPanel panel){
-        addButtonWithDimension("Aliggg.png", panel, 15);
+        addButtonWithDimension("Aliggg.png", panel);
      }
      private void addButtomAlig3(JPanel panel){
       
-        addButtonWithDimension("Aliggg.png", panel, 20);
+        addButtonWithDimension("Aliggg.png", panel);
        
      }
 

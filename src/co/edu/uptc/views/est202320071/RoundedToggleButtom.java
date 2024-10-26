@@ -1,8 +1,12 @@
 package co.edu.uptc.views.est202320071;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JToggleButton;
 import javax.swing.border.AbstractBorder;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Insets;
+
 
 public class RoundedToggleButtom extends JToggleButton {
 
