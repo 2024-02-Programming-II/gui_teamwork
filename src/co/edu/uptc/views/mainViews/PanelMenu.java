@@ -136,7 +136,7 @@ public class PanelMenu extends JPanel {
     addButton("202320071").addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        MainFrame.getInstance().activatePanel(PanelEnum.DEFAULT);
+        MainFrame.getInstance().activatePanel(PanelEnum.STYLES_MANAGER);
       }
 
     });

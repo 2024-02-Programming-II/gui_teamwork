@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 
 public class PrincipalFrame extends JPanel{
 
+   
     private static PrincipalFrame instance=null;
     private JPanel jPanel;
     private PanelMyDay panelMyDay;
