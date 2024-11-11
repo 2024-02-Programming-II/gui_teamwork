@@ -1,6 +1,7 @@
 package co.edu.uptc.views.mainViews;
 
 import co.edu.uptc.enums.PanelEnum;
+import co.edu.uptc.views.est202212890.panelStyle.PanelStyleModification;
 import co.edu.uptc.views.est202310254.PanelModifyStyles;
 import co.edu.uptc.views.est202320336.PrincipalFrame;
 import co.edu.uptc.views.est202320071.PanelStyles;
@@ -23,6 +24,7 @@ public class MainFrame extends JFrame {
   private PanelStatus panelStatus;
   private PanelModifyStyles panelStyles;
   private PanelStyles panelStyles202320071;
+  private PanelStyleModification panelStyle202212890;
 
   private MainFrame() {
     setSize(500, 400);
@@ -72,12 +74,14 @@ public class MainFrame extends JFrame {
     panelVehicleManager = new PanelVehicleManager();
     panelStyles = new PanelModifyStyles();
     panelStyles202320071 = new PanelStyles();
+    panelStyle202212890 = new PanelStyleModification();
     panelCenter.add(panelMain, PanelEnum.MAIN.toString());
     panelCenter.add(panelDefault, PanelEnum.DEFAULT.toString());
     panelCenter.add(panelStyles, PanelEnum.MODIFY_STYLES.toString());
     panelCenter.add(PrincipalFrame.getInstantance(), PanelEnum.PRINCIPAL.toString());
     panelCenter.add(panelStyles202320071, PanelEnum.STYLES_MANAGER.toString());
     panelCenter.add(panelVehicleManager, PanelEnum.VEHICLE_MANAGER.toString());
+    panelCenter.add(panelStyle202212890, PanelEnum.STYLE_MANAGER.toString());
 
   }
 
