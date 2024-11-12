@@ -29,4 +29,6 @@ public class ColorPalette  {
     // Colores para la barra de estado
     public static final Color COLOR_BACKGROUND_STATUS_BAR = new Color(0x6A9AB0); 
     public static final Color COLOR_FOREGROUND_STATUS_BAR = new Color(0xFFFFFF); 
+
+    public static final Color BORDER_COLOR = Color.gray;
 }

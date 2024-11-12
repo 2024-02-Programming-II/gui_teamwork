@@ -5,8 +5,8 @@ import java.awt.BorderLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
+import co.edu.uptc.views.constants.ColorPalette;
 import co.edu.uptc.views.est202312573.findAndReplace.DialogFindReplace;
-import co.edu.uptc.views.est202312573.findAndReplace.palettes.*;;
 
 public class CenterSecondPanel extends JPanel{
     DialogFindReplace mainDialog;

@@ -5,9 +5,9 @@ import javax.swing.BorderFactory;
 
 import javax.swing.JPanel;
 
+import co.edu.uptc.views.constants.ColorPalette;
 import co.edu.uptc.views.est202312573.findAndReplace.DialogFindReplace;
 import co.edu.uptc.views.est202312573.findAndReplace.SecondSection.CenterSecondPanel;
-import co.edu.uptc.views.est202312573.findAndReplace.palettes.ColorPalette;
 
 public class PrincipalFirstPanel extends JPanel{
     DialogFindReplace mainDialog;

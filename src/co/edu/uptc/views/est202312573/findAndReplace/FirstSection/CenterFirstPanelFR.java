@@ -14,7 +14,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-import co.edu.uptc.views.est202312573.findAndReplace.palettes.*;
+import co.edu.uptc.views.constants.ColorPalette;
+
 
 public class CenterFirstPanelFR extends JPanel {
     GridBagConstraints gbc = new GridBagConstraints();

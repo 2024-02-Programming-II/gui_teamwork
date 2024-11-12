@@ -1,7 +1,7 @@
 package co.edu.uptc.views.est202312573.findAndReplace.SecondSection;
 
+import co.edu.uptc.views.constants.ColorPalette;
 import co.edu.uptc.views.est202312573.findAndReplace.DialogFindReplace;
-import co.edu.uptc.views.est202312573.findAndReplace.palettes.*;
 
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
