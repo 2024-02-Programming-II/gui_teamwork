@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import co.edu.uptc.enums.PanelEnum;
 import co.edu.uptc.views.components.JToggleButtonCustom;
 import co.edu.uptc.views.constants.ColorPalette;
+import co.edu.uptc.views.est202312573.findAndReplace.DialogFindReplace;
 import co.edu.uptc.views.est202320336.*;
 
 public class PanelMenu extends JPanel {
@@ -184,12 +185,14 @@ public class PanelMenu extends JPanel {
 
   private void addBtnAction202312573() {
     addButton("202312573").addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        MainFrame.getInstance().activatePanel(PanelEnum.DEFAULT);
-      }
 
-    });
+        @Override
+        public void actionPerformed(ActionEvent e) {
+          DialogFindReplace dialogFindReplace = new DialogFindReplace(MainFrame.getInstance(), "Find & Replace");
+          dialogFindReplace.start();
+        }
+        
+      });
   }
 
   private void addBtnAction202320207() {
