@@ -7,4 +7,6 @@ public enum PanelEnum {
     MODIFY_STYLES,
     PRINCIPAL,
     STYLES_MANAGER, 
+    PAGE_CONFIGURATION;
 }
+
