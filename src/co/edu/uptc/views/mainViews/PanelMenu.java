@@ -13,7 +13,6 @@ import javax.swing.JPanel;
 import co.edu.uptc.enums.PanelEnum;
 import co.edu.uptc.views.components.JToggleButtonCustom;
 import co.edu.uptc.views.constants.ColorPalette;
-import co.edu.uptc.views.est202320336.*;
 
 public class PanelMenu extends JPanel {
 
@@ -203,10 +202,10 @@ public class PanelMenu extends JPanel {
   }
 
   private void addBtnAction202128307() {
-    addButton("202320207").addActionListener(new ActionListener() {
+    addButton("202128307").addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        MainFrame.getInstance().activatePanel(PanelEnum.DEFAULT);
+        MainFrame.getInstance().activatePanel(PanelEnum.PAGE_CONFIGURATION);
       }
 
     });
